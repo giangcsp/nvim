@@ -47,6 +47,7 @@ lsp.on_attach(function(client, bufnr)
 		require("lsp_lines").toggle,
 		{ desc = "Toggle lsp_lines" }
 	)
+	require("lsp_lines").toggle()
 end)
 
 lsp.setup()
