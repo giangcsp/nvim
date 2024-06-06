@@ -42,11 +42,14 @@ lsp.on_attach(function(client, bufnr)
 	vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format)
 	vim.keymap.set("n", "<leader>lh", vim.lsp.buf.hover)
 	vim.keymap.set(
-		"",
+		"n",
 		"<Leader>ll",
 		require("lsp_lines").toggle,
 		{ desc = "Toggle lsp_lines" }
 	)
+	vim.keymap.set("n", "<leader>ld", vim.lsp.buf.definition)
+	vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename)
+	vim.keymap.set("n", "<leader>le", vim.diagnostic.open_float, opts)
 	require("lsp_lines").toggle()
 end)
 

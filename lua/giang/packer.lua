@@ -76,9 +76,7 @@ return require('packer').startup(function(use)
 	use {
 		'numToStr/Comment.nvim',
 		config = function()
-			require('Comment').setup({
-				opleader = { line = 'cc', block = 'cb' },
-			})
+			require('Comment').setup()
 		end
 	}
 
