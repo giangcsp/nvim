@@ -100,4 +100,8 @@ return require('packer').startup(function(use)
 			}
 		end
 	}
+
+  use {
+    "tact-lang/tact.vim"
+  }
 end)
