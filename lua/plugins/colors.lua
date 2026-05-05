@@ -1,15 +1,16 @@
 return {
-  {
-    "rose-pine/neovim",
-    name = "rose-pine",
-    priority = 1000,
-    config = function()
-      require("rose-pine").setup({
-        disable_background = true,
-      })
-      vim.cmd.colorscheme("rose-pine")
-      vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-      vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-    end,
-  },
+  "Mofiqul/vscode.nvim",
+  priority = 1000,
+  config = function()
+    require("vscode").setup({
+      style = "dark",
+      transparent = true,
+    })
+
+    vim.cmd.colorscheme("vscode")
+
+    -- keep your UI, only change text colors
+    vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
+    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "NONE" })
+  end,
 }
